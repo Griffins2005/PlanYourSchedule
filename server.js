@@ -12,7 +12,7 @@ app.use('/api/schedule', scheduleRoutes);
 app.use('/api/users', userRoutes);
 
 mongoose
-  .connect('mongodb+srv://griffinstanui14:Griffins%402005@cluster0.pdru0nf.mongodb.net/test', {
+  .connect(process.env.DATABASE_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
